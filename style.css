@@ -1,0 +1,54 @@
+*{
+  font-family: sans-serif;
+}
+.body{
+  background: #1D1E20;
+  color: white;
+}
+.container {
+  position: relative;
+  text-align: left;
+}
+.Name {
+  font-size: 37px;
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Work{
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#4E8268;
+}
+.h1{
+  font-size: 70px;
+  margin-bottom: 3%;
+}
+.td1{
+  box-shadow:5px 5px 5px 2px rgb(14, 14, 14); 
+  height: 750;
+}
+.td2{
+  margin: 100px;
+}
+.green{
+  color:#4E8268;
+}
+.para-1{
+  color: grey;
+}
+.material-icons{
+  color: #4E8268;
+}
+.td3{
+  width: 300px;
+}
+.table{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,67 +1,119 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Resume Assignment</title>
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="body">
-    <table class="table">
-        <tr>
-            <td class="td1">
-                <p>
-                <div class="container">
-                    <img src="./profile.png" alt="profile" width="450" height="800">
-                    <h1 class="Name">Jose Niko</h1>
-                    <div class="Work">Developer</div>
-                </div>
-                </p>
-            </td>
-            <td>&nbsp;&nbsp;</td>
-            <td class="td2">
-                <h1 class="h1">about me</h1>
-                <span class="green">28 years</span>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-                <span class="green">lviv&nbsp;&nbsp;&nbsp;</span>/&nbsp;&nbsp;&nbsp;<span class="green">Freelance</span>
-                <p class="para-1">prolific, full stack web developer with a passion for metrics and beating former</br>
-                    "best-yets.
-                    prototyped 25 new product features per year for Flexor,inc</br>decreased rework by 22% and costs by
-                    15%. Consistently receive high user</br>experience for all web development projects. including a 55%
-                    increase</br>for Flexor,inc. Passionate about building world class web applications. One of</br>my
-                    sites received a 2015 Webby for Best Navigation and Structure.</p>
-                <hr color="#313131" size="0px">
-                </br>
-                <h1>my services</h1>
-            <table>
-            <tr>
-            <td class="td3">
-                <i class="material-icons" style="font-size: 200%;">desktop_windows</i>
-                <h2 style="margin-top: 10px;">development</h2>
-                <p class="para-1">building a custom tailored solution</br>based on your technical</br>specification</p>
-            </br>
-                <i class="material-icons" style="font-size: 200%;">content_copy</i>
-                <h2 style="margin-top: 10px;">data base</h2>
-                <p class="para-1">SSL cetificate installation and</br>configuartion,redirection</br>configuartion on your website</p>
-            </td>
-            <td>
-                <i class="material-icons" style="font-size: 200%;">verified_user</i>
-                <h2 style="margin-top: 10px;">SEO optimization</h2>
-                <p class="para-1">Audit your website,perform</br>technical improvements and write</br>meta tags</p>
-            </br>
-                <i class="material-icons" style="font-size: 200%;">gpp_bad_outline</i>
-                <h2 style="margin-top: 10px;">data security</h2>
-                <p class="para-1">Strategy with leading data protection</br>technology to safeguard your critical</br>data</p>
-            </td>
-            </tr>
-            </table>
-        <hr color="#313131" size="0px">
-        <td>&nbsp;&nbsp;</td>
-            </td>
-        </tr>
-    </table>
+<body>
+     <div class="clock">
+        <div class="hand-seconds"></div>
+        <div class="hand-minutes"></div>
+        <div class="hand-hours"></div>
+        <div class="number number1">1</div>
+        <div class="number number2">2</div>
+        <div class="number number3">3</div>
+        <div class="number number4">4</div>
+        <div class="number number5">5</div>
+        <div class="number number6">6</div>
+        <div class="number number7">7</div>
+        <div class="number number8">8</div>
+        <div class="number number9">9</div>
+        <div class="number number10">10</div>
+        <div class="number number11">11</div>
+        <div class="number number12">12</div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Drum Kit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="instructions">Press Keys to play the Drum</div>
+
+    <div class="keys">
+      <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="sound">clap</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">hihat</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="sound">kick</span>
+      </div>
+      <div data-key="70" class="key">
+        <kbd>F</kbd>
+        <span class="sound">openhat</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>G</kbd>
+        <span class="sound">boom</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>H</kbd>
+        <span class="sound">ride</span>
+      </div>
+      <div data-key="74" class="key">
+        <kbd>J</kbd>
+        <span class="sound">snare</span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>K</kbd>
+        <span class="sound">tom</span>
+      </div>
+      <div data-key="76" class="key">
+        <kbd>L</kbd>
+        <span class="sound">tink</span>
+      </div>
+    </div>
+
+    <audio data-key="65" src="../../YOUTUBE STUFF/urdu hindi memez/Ary Kon Bhonk Rha Hy.mp4"></audio>
+    <audio data-key="83" src="../../YOUTUBE STUFF/urdu hindi memez/BOHOT Tez Ho rhy ho.mp4"></audio>
+    <audio data-key="68" src="../../YOUTUBE STUFF/urdu hindi memez/Dekha apni laparwai ka natija.mp4"></audio>
+    <audio data-key="70" src="../../YOUTUBE STUFF/urdu hindi memez/Esy to ni hota h.mp4"></audio>
+    <audio data-key="71" src="../../YOUTUBE STUFF/urdu hindi memez/Ha malom h tere bap ko mt skha.mp4"></audio>
+    <audio data-key="72" src="../../YOUTUBE STUFF/urdu hindi memez/Hello channel welcome back to my guys.mp4"></audio>
+    <audio data-key="74" src="../../YOUTUBE STUFF/urdu hindi memez/JAHANAMI JAHANAMI.mp4"></audio>
+    <audio data-key="75" src="../../YOUTUBE STUFF/urdu hindi memez/M begairat ho.mp4"></audio>
+    <audio data-key="76" src="../../YOUTUBE STUFF/2021-06-19 13-58-47.mp4"></audio>
+
+    <script>
+      function removeTransition(e) {
+        if (e.propertyName !== "transform") return;
+        e.target.classList.remove("playing");
+      }
+
+      function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+        if (!audio) return;
+
+        key.classList.add("playing");
+        audio.currentTime = 0;
+        audio.play();
+      }
+
+      const keys = Array.from(document.querySelectorAll(".key"));
+      keys.forEach((key) =>
+        key.addEventListener("transitionend", removeTransition)
+      );
+      window.addEventListener("keydown", playSound);
+    </script>
+  </body>
 </html>

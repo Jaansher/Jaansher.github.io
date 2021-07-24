@@ -1,3 +1,5 @@
+document.write("<h1>OPEN CONSOLE PLEASE"</h1>);
+
 //Q.NO=1
 console.log("Q.No=1")
 

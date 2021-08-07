@@ -1,0 +1,65 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgba(61, 60, 60, 0.254);
+}
+.header{
+    padding: 6px;
+    background-color: black;
+    font-size: 50px;
+    color: white;
+    margin: 0px;
+}
+.container{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.quiz-box{
+    width: 40%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    background-color: rgb(36, 34, 34);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: black 0px 0px 10px 10px;
+}
+#questions{
+    width: 40%;
+    word-wrap: break-word;
+    background-color: rgb(36, 34, 34);
+    box-shadow: black 0px 0px 10px 10px;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+.hide{
+    display: none;
+}
+#next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+button{
+    width: 40%;
+    margin: 7px;
+    border-radius: 10px;
+    font-size: 23px;
+    word-wrap: break-word;
+}
+button:hover{
+    background-color: rgb(181, 177, 177);
+}
+.clicked{
+    background-color: yellow;
+    color: red;
+}
+.clicked:hover{
+    background-color: yellow;
+}

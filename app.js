@@ -1,95 +1,185 @@
-document.write("<h1>OPEN CONSOLE PLEASE"</h1>);
+var allQuestions = [{
+  question: "Inside which HTML element do we put the JavaScript?",
+  options: ["scripting", "javascript", "js", "script"],
+  answer: "script"
+}, {
+  question: "Where is the correct place to insert a JavaScript?",
+  options: ["head", "body", "head and body", "none of above"],
+  answer: "head and body"
+}, {
+  question: "How can you get the type of arguments passed to a function?",
+  options: ["using typeOf operator", "using getType function", "Both of the above", "None of the above"],
+  answer: "using typeOf operator"
+}, {
+  question: "Which built-in method returns the character at the specified index?",
+  options: ["characterAt()", "getCharAt()", "charAt()", "None of the above"],
+  answer: "charAt()"
+}, {
+  question: "Which built-in method reverses the order of the elements of an array?",
+  options: ["changeOrder(order)", "reverse()", "sort(order)", "None of the above"],
+  answer: "reverse()"
+}, {
+  question: "Which of the following function of String object returns the primitive value of the specified object?",
+  options: ["toLocaleUpperCase()", "toUpperCase()", "toString()", "valueOf()"],
+  answer: "valueOf()"
+}, {
+  question: "Which of the following function of Array object removes the last element from an array and returns that element?",
+  options: ["pop()", "push()", "join()", "map()"],
+  answer: "pop()"
+}, {
+  question: "Which of the following function of Array object represents the source code of an object?",
+  options: ["toSource()", "splice()", "toString()", "unshift()"],
+  answer: "toSource()"
+}, {
+  question: "Javascript is a _____ language.",
+  options: ["Programming", "Application", "Scripting", "None of the above"],
+  answer: "Programming"
+}, {
+  question: "JavaScript code is written inside file having extension?",
+  options: [".jvs", ".js", ".jsc", ".javascript"],
+  answer: ".js"
+}];
+var num = -1;
+function disabled(x) {
+  for (var i = 0; i <= 3; i++) {
+    document.getElementsByTagName("button")[i].disabled = x
 
-//Q.NO=1
-console.log("Q.No=1")
-
-var arr = [
-{ name: 'juice',
-  price: 50, 
-  quantity: 3},
-{ name: 'cookie', 
-  price: 30, 
-  quantity: 9 },
-{ name: 'shirt', 
-  price: 880, 
-  quantity: 1 },
-{ name: 'pen', 
-  price: 100, 
-  quantity: 2 }];
-
-for (var i = 0; i < arr.length; i++) {
-    var allItem =  arr[i].price * arr[i].quantity;
-    console.log(arr[i].name + " price of each item " + arr[i].price + " price of all items " + arr[i].price * arr[i].quantity)
+  }
+}
+function nextBtn(x) {
+  document.getElementById("next").disabled = x
+}
+function start() {
+  for (var i = 0; i <= 3; i++) {
+    document.getElementsByTagName("button")[i].removeAttribute("class");
+  }
+  document.getElementsByTagName("h2")[0].removeAttribute("class");
+  var next = document.getElementById("next");
+  next.innerText = "Next";
+  next.style.fontSize = '25px';
+  document.getElementById("next").disabled = true;
+  next.removeAttribute("onclick");
+  next.setAttribute("onclick", "nextQue()");
+}
+  function clrRemover() {
+    for (var i = 0; i <= 3; i++) {
+      document.getElementsByTagName("button")[i].removeAttribute("class")
+    }
+  }
+function clrChanger(x) {
+  document.getElementsByTagName("button")[x].className = "clicked";
 }
 
-//Q.NO=2
-console.log("Q.No=2")
-
-var obj = {
-    name: "nadir",
-    email: "nadirxoxo@gmail.com",
-    password:213124125,
-    age:22,
-    gender: "male",
-    city: "karachi",
-    country: "pakistan"
-};
-if ("age" in obj && "country" in obj) {
-    console.log("age and country are available");
-}
-else if ("age" in obj){
-    console.log("age is available");
-}
-else if ("country" in obj){
-    console.log("country is available");
-}
-else {
-    console.log("age and country are missing");
+var arr = [];
+function getId(Ques) {
+    arr.push(Ques)
 }
 
-if ("firstName" in obj && "lastName" in obj) {
-    console.log("firstName and lastName are available");
-}
-else if ("firstName" in obj){
-    console.log("firstName is available");
-}
-else if ("lastName" in obj){
-    console.log("lastName is available");
-}
-else {
-    console.log("firstName and lastName are missing");
+function clrPrev(){
+  document.getElementById(arr[num]).className = "clicked";
 }
 
-//Q.NO=3
-console.log("Q.No=3")
+var next = 0;
 
-function Student(name,age,rollNo){
-    this.name = name
-    this.age = age
-    this.rollNo = rollNo
+function nextQue() {
+  num++;
+  nextBtn(true)
+  clrRemover()
+  if (num >= 8) {
+    document.getElementById("next").innerText = "finish";
+  }
+  if (num >= 9) {
+    for (var i = 0; i <= 5; i++) {
+      document.getElementsByTagName("button")[i].style.display = "none";
+    }
+    document.getElementsByTagName("h2")[0].style.display = "none";
+    document.getElementById("end").append("You Scored " + score + "/10")
+    document.getElementById("end").style.color = "white";
+    return;
+  }
+  if (num === 1) {
+    document.getElementById("prev").removeAttribute("class");
+  }
+  disabled(false)
+  document.getElementById("questions").innerText = allQuestions[num].question;
+  document.getElementById("option1").innerText = allQuestions[num].options[0];
+  document.getElementById("option2").innerText = allQuestions[num].options[1];
+  document.getElementById("option3").innerText = allQuestions[num].options[2];
+  document.getElementById("option4").innerText = allQuestions[num].options[3];
+  if(next < num + 1){
+    disabled(false)
+  }
+  else{
+    clrPrev()
+    nextBtn(false)
+    disabled(true)
+  }
+
 }
-Student.prototype.course = "Web And App" ;
-var jaansher = new Student("Jaansher",19,20736);
-var nadir = new Student("Nadir",22,20553);
-var usman = new Student("Usman",20,20266);
-var khizer = new Student("Khizer",21,20215);
-console.log(jaansher,nadir,usman,khizer);
 
-//Q.NO=4
-console.log("Q.No=4")
 
-function AreaData(name,gender,address,education,profession){
-    this.name = name
-    this.gender = gender
-    this.address = address
-    this.education = education
-    this.profession = profession
+function prevQue() {
+  num--;
+  clrRemover()
+  clrPrev()
+  nextBtn(false)
+  disabled(true)
+  if (num <= 0) {
+    document.getElementById("prev").setAttribute("class", "hide");
+  }
+  if (num <= -1) {
+    num++
+  }
+  document.getElementById("questions").innerText = allQuestions[num].question;
+  document.getElementById("option1").innerText = allQuestions[num].options[0];
+  document.getElementById("option2").innerText = allQuestions[num].options[1];
+  document.getElementById("option3").innerText = allQuestions[num].options[2];
+  document.getElementById("option4").innerText = allQuestions[num].options[3];
 }
 
-var person1 = new AreaData("Jaansher","male","Malir","Matric","programming");
-var person2 = new AreaData("Khizer","male","saddar","intermediate","Bank Manager");
-var person3 = new AreaData("fatima","female","quaidabad","mbbs","doctor");
-localStorage.setItem("population",person1.profession)
-console.log(person2)
-console.log(person3.address)
-console.log(localStorage.getItem("population"));
+var score = 0;
+
+function button1() {
+  next++;
+  clrChanger(0)
+  nextBtn(false)  
+  getId("option1")
+  disabled(true);
+  var text = document.getElementById("option1").innerText;
+  if (text === allQuestions[num].answer) {
+    score++;
+  }
+}
+function button2() {
+  next++;
+  clrChanger(1)
+  nextBtn(false)
+  getId("option2")
+  disabled(true);  
+  var text = document.getElementById("option2").innerText;
+  if (text === allQuestions[num].answer) {
+    score++;
+  }
+}
+function button3() {
+  next++;
+  clrChanger(2)
+  nextBtn(false)
+  getId("option3")
+  disabled(true); 
+  var text = document.getElementById("option3").innerText;
+  if (text === allQuestions[num].answer) {
+    score++;
+  }
+}
+function button4() {
+  next++;
+  clrChanger(3)
+  nextBtn(false)
+  getId("option4")
+  disabled(true);
+  var text = document.getElementById("option4").innerText;
+  if (text === allQuestions[num].answer) {
+    score++;
+  }
+}

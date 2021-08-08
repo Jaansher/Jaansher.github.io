@@ -40,6 +40,19 @@ body{
 .hide{
     display: none;
 }
+img{
+    filter: invert();
+
+}
+#reload{
+    display: none;
+    margin-top: 20px;
+    width: 35px;
+    background-color: rgb(36, 34, 34);
+    box-shadow: black 0px 0px 10px 10px;
+    border-radius: 100px;
+    color: white;
+}
 #next{
     display: flex;
     justify-content: center;
@@ -62,4 +75,14 @@ button:hover{
 }
 .clicked:hover{
     background-color: yellow;
+}
+@media all and (max-width: 700px){
+    button{
+        font-size: 15px;    }
+    #next{
+        font-size: 30px;
+    }
+    #question{
+        font-size: 20px;
+    }
 }

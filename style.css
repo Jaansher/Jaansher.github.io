@@ -61,10 +61,15 @@ button{
     flex-direction: column;
     align-items: center;
 }
+#teams-own, #teams-in{
+    width: 100%;
+    margin-left: 27%;
+}
 .teams{
     border: 1px solid black;
     padding: 1%;
-    width: 80%;
+    width: 70%; 
+    margin: 10px;
 }
 #create-team-btn{
     float: right;
@@ -132,10 +137,11 @@ span input{
     background-color: lightgray;
     border-radius: 2em;
     margin: 4px;
+    display: flex;
+    align-items: center;
 }
 #members-manage{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 .members button{
@@ -143,10 +149,8 @@ span input{
     color: lightgray;
     padding: 2% 4%;
     border-radius: 20px;
-    float: right;
-    position: relative;
-    bottom: 11px;
     font-weight: 900;
+    margin: 0px;
 }
 .setting-btns button{
     padding: 10px;
@@ -162,4 +166,21 @@ span input{
 }
 .setting-btns{
     width: 90%;
+}
+#member-view{
+    margin: 2%;
+}
+#report input {
+    width: 50%;
+}
+#reports{
+    margin-top: 30px;
+    height: 250px;
+}
+.report{
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.report p{
+    margin: 5px 0px;
 }

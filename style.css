@@ -1,48 +1,20 @@
-/* Login Form */
-#container{
-    font-family: sans-serif;
-    margin: 10% 10%;
-}
-#main{
-    padding: 0%;
-}
+/* Login */
 #login-box{
     margin: 10% 30%;
-    margin-bottom: 1%;
     color: grey;
-    font-size: 15px;
 }
-#back{
-    border: none;
-    background-color: red;
-    border-radius: 50%;
-    padding: 3% 1%;
-    margin: 0%;
-    margin-left: -1%;
-    margin-bottom: 5%;
-}
-input, #username{
+
+#login-box input{
     outline: none;
     border: none;
     border-bottom: 1px solid rgba(128, 128, 128, 0.638);
     width: 100%;
     color: #000;
 }
-#team-name, #add-member{
-    width: 75%;
-}
-#buttons{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10%;
-}
 .hide{
     display: none;
 }
-h3{
-    font-weight: 500;
-}
-button{
+#buttons button,#logout,#start-game{
     color: white;
     background-color: royalblue;
     border: none;
@@ -50,137 +22,55 @@ button{
     margin: 2%;
 }
 #logout{
-    float: right;
-    padding: 5px 5px;
-    margin-left: 90%;
     background-color: red;
 }
-/* Logged  */
-#teams{
-    font-family: sans-serif;
-    flex-direction: column;
+/* Game */
+#game{
+    display: flex;
+    align-items: flex-end;
+}
+#game-sidebar{
+    display: flex;
+    width: 13%;
     align-items: center;
+    flex-direction: column;
 }
-#teams-own, #teams-in{
-    width: 100%;
-    margin-left: 27%;
+#container{
+    display: flex;
+    width: 85%;
+    height: 38em;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
 }
-.teams{
-    border: 1px solid black;
-    padding: 1%;
-    width: 70%; 
-    margin: 10px;
+#container div{
+    margin: 4%;
+    width: 7%;
+    height: 80px;
+    border-radius: 3em;
 }
-#create-team-btn{
-    float: right;
-    border-radius: 50%;
-    padding: 5px 10px;
+.pop{
+    font-size: 30px;
+    position: relative;
+    top: 25px;
+}
+#levels{
+    margin-bottom: 25px
+}
+#score{
+    margin-bottom: 25px;
     font-size: 20px;
 }
-#popup-bg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0,0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#lifes{
+    margin-bottom: 25px;
+    font-size: 20px;
 }
-#create-team{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 50%;
-    height: 60%;
-    background-color: white;
-    border: 1px solid black;
+#highest-score{
+    font-size: 19px;
+    margin-bottom: 25px;
+    text-align: center;
 }
-#team-catag{
-    padding: 2%;
-    width: 75%;
-}
-/* Created Teams */
-#reports-btn, #settings-btn{
-    background-color: white;
-    color: black;
-    margin-bottom: 0%;
-}
-#reports-btn:focus, #settings-btn:focus{
-    border-bottom: 2px solid red;
-}
-#team-set{
-    border-bottom: 1px solid rgb(182, 176, 176);
-}
-#report-set{
-    margin: 4%;
-}
-#members-sel{
-    padding: 3px 4% 3px 3px;
-}
-#settings-set{
-    margin: 4%;
-}
-#settings-set input{
-    width: 40%;
-    margin-left: 10%;
-}
-span input{
-    width: 1px;
-}
-.members{
-    padding: 1%;
-    width: 30%;
-    height: 15px;
-    background-color: lightgray;
-    border-radius: 2em;
-    margin: 4px;
-    display: flex;
-    align-items: center;
-}
-#members-manage{
-    display: flex;
-    flex-wrap: wrap;
-}
-.members button{
-    background-color: grey;
-    color: lightgray;
-    padding: 2% 4%;
-    border-radius: 20px;
-    font-weight: 900;
-    margin: 0px;
-}
-.setting-btns button{
-    padding: 10px;
-    margin-left: 10%;
-}
-#cancel-settings{
-    background-color: white;
-    color: black;
-    box-shadow: 0px 2px 15px 4px #888888;
-}
-#delete-team, #cancel-btn{
-    background-color: rgb(255, 91, 3);
-}
-.setting-btns{
-    width: 90%;
-}
-#member-view{
-    margin: 2%;
-}
-#report input {
-    width: 50%;
-}
-#reports{
-    margin-top: 30px;
-    height: 250px;
-}
-.report{
-    margin-top: 10px;
-    margin-left: 80px;
-}
-.report p{
-    margin: 5px 0px;
+#container b{
+    font-size: 50px;
+    margin-left: 37%;
 }

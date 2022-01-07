@@ -1,20 +1,48 @@
-/* Login */
+/* Login Form */
+#container{
+    font-family: sans-serif;
+    margin: 10% 10%;
+}
+#main{
+    padding: 0%;
+}
 #login-box{
     margin: 10% 30%;
+    margin-bottom: 1%;
     color: grey;
+    font-size: 15px;
 }
-
-#login-box input{
+#back{
+    border: none;
+    background-color: red;
+    border-radius: 50%;
+    padding: 3% 1%;
+    margin: 0%;
+    margin-left: -1%;
+    margin-bottom: 5%;
+}
+input, #username{
     outline: none;
     border: none;
     border-bottom: 1px solid rgba(128, 128, 128, 0.638);
     width: 100%;
     color: #000;
 }
+#team-name, #add-member{
+    width: 75%;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
 .hide{
     display: none;
 }
-#buttons button,#logout,#start-game{
+h3{
+    font-weight: 500;
+}
+button{
     color: white;
     background-color: royalblue;
     border: none;
@@ -22,55 +50,155 @@
     margin: 2%;
 }
 #logout{
+    float: right;
+    padding: 5px 5px;
+    margin-left: 90%;
     background-color: red;
 }
-/* Game */
-#game{
-    display: flex;
-    align-items: flex-end;
+/* Logged  */
+#teams{
+    font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
 }
-#game-sidebar{
+#teams-own, #teams-in{
+    width: 100%;
+    margin-left: 27%;
+}
+.teams{
+    border: 1px solid black;
+    padding: 1%;
+    width: 70%; 
+    margin: 10px;
+}
+#create-team-btn{
+    float: right;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+#popup-bg{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0,0.7);
     display: flex;
-    width: 13%;
+    justify-content: center;
+    align-items: center;
+}
+#create-team{
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 50%;
+    height: 60%;
+    background-color: white;
+    border: 1px solid black;
 }
-#container{
-    display: flex;
-    width: 85%;
-    height: 38em;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
+#team-catag{
+    padding: 2%;
+    width: 75%;
 }
-#container div{
+/* Created Teams */
+#reports-btn, #settings-btn{
+    background-color: white;
+    color: black;
+    margin-bottom: 0%;
+}
+#reports-btn:focus, #settings-btn:focus{
+    border-bottom: 2px solid red;
+}
+#team-set{
+    border-bottom: 1px solid rgb(182, 176, 176);
+}
+#report-set{
     margin: 4%;
-    width: 7%;
-    height: 80px;
-    border-radius: 3em;
 }
-.pop{
-    font-size: 30px;
-    position: relative;
-    top: 25px;
+#members-sel{
+    padding: 3px 4% 3px 3px;
 }
-#levels{
-    margin-bottom: 25px
+#settings-set{
+    margin: 4%;
 }
-#score{
-    margin-bottom: 25px;
-    font-size: 20px;
+#settings-set input{
+    width: 40%;
+    margin-left: 10%;
 }
-#lifes{
-    margin-bottom: 25px;
-    font-size: 20px;
+span input{
+    width: 1px;
 }
-#highest-score{
-    font-size: 19px;
-    margin-bottom: 25px;
-    text-align: center;
+.members{
+    padding: 1%;
+    width: 30%;
+    height: 15px;
+    background-color: lightgray;
+    border-radius: 2em;
+    margin: 4px;
+    display: flex;
+    align-items: center;
 }
-#container b{
-    font-size: 50px;
-    margin-left: 37%;
+#members-manage{
+    display: flex;
+    flex-wrap: wrap;
+}
+.members button{
+    background-color: grey;
+    color: lightgray;
+    padding: 2% 4%;
+    border-radius: 20px;
+    font-weight: 900;
+    margin: 0px;
+}
+.setting-btns button{
+    padding: 10px;
+    margin-left: 10%;
+}
+#cancel-settings{
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 15px 4px #888888;
+}
+#delete-team, #cancel-btn{
+    background-color: rgb(255, 91, 3);
+}
+.setting-btns{
+    width: 90%;
+}
+#member-view{
+    margin: 2%;
+}
+#report input {
+    width: 50%;
+}
+#reports{
+    margin-top: 30px;
+    height: 250px;
+}
+
+/* Responsive */
+@media all and (max-width: 500px){
+   .teams{
+       font-size: 7px;
+    }
+    #create-team-btn{
+        font-size: 10px;
+        padding: 5px 8px;    
+    }
+   #logout{
+    font-size: 10px;
+    padding: 2px 2px;
+    }
+    h3{
+        font-size: 12px;
+    }
+    button{
+        font-size: 8px;
+        padding: 4px 6px;
+    }
+    #members-manage{
+        font-size: 6px;
+    }
 }

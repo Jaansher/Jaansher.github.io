@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 align="center" class="header">Welcome To The Quiz</h1>
+    <div class="container">
+        <h2 id="questions" class="hide"></h2>
+    </br>
+        <div class="quiz-box" id="end">
+        <button id="option1" class="hide" onclick="button1()"></button>
+        <button id="option2" class="hide" onclick="button2()"></button>
+        <button id="option3" class="hide" onclick="button3()"></button>
+        <button id="option4" class="hide" onclick="button4()"></button>
+        <button id="prev"  class="hide" onclick="prevQue()">Prev</button>
+        <button id="next" onclick="nextQue(), start()">Start</button>
+        </div>        
+        <button id="reload" onclick="location.reload()">
+            <img src="https://www.freeiconspng.com/thumbs/reload-icon/reload-icon-4.png" alt="reload-icon" width="20px" height="20px">
+        </button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
